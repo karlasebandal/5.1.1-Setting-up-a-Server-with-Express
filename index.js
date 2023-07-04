@@ -59,7 +59,6 @@ app.post('/api/jokes', (req,res) => {
         ? Math.max(...jokes.map(n => n.id))
         : 0
     const joke = req.body
-    joke.id = maxId + 1
     jokes.push(joke)
     res.json(joke)
 })
